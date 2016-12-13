@@ -1,6 +1,8 @@
 <?php
-  class AuthenticationController {
+  class AuthenticationController{
+
     public function login() {
+      die('here');
       require_once('views/auth/login.php');
     }
 

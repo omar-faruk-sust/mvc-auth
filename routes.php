@@ -1,21 +1,20 @@
 <?php
 	function call($controller, $action) {
-
+	
     // require the file that matches the controller name
     require_once('controllers/' . $controller . '_controller.php');
 
     // create a new instance of the needed controller
     switch($controller) {
       case 'pages':
-      echo $controller; echo " --> " . $action; die(' hdddh ghg');
         $controller = new PagesController();
-
       	break;
       case 'authentication':
+      	echo $controller; die('hhh');
       	$controller = new AuthenticationController();
       	break;
     }
-    echo $controller; echo " --> " . $action; die(' hdddh');
+ 
     // call the action
     $controller->{ $action }();
   }
