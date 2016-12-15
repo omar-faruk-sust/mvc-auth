@@ -2,8 +2,7 @@
   class PagesController {
     
     public function home() {
-      $first_name = 'Jon';
-      $last_name  = 'Snow';
+      $test_string = 'Hello world';
       require_once('views/pages/home.php');
     }
 

@@ -1,6 +1,6 @@
 <?php
 	function call($controller, $action) {
-	
+	//echo $controller; die;
     // require the file that matches the controller name
     require_once('controllers/' . $controller . '_controller.php');
 
@@ -10,7 +10,7 @@
         $controller = new PagesController();
       	break;
       case 'authentication':
-      	echo $controller; die('hhh');
+        require_once('models/user.php');
       	$controller = new AuthenticationController();
       	break;
     }
@@ -23,7 +23,7 @@
   // we consider those "allowed" values
   $controllers = array(
   	'pages' => ['home', 'error'],
-  	'authentication' => 'login','logout','registration','forget_password'
+  	'authentication' => ['login','logout','registration','forget_password']
   );
 
   // check that the requested controller and action are both allowed
